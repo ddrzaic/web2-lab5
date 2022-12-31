@@ -1,12 +1,32 @@
-import { Inter } from "@next/font/google";
 import Webcam from "react-webcam";
-
-const inter = Inter({ subsets: ["latin"] });
+import Image from "next/image";
+import * as React from "react";
+import styled, { css } from "styled-components";
 
 export default function Home() {
   return (
-    <div>
+    <Div>
       <Webcam />
-    </div>
+      <Image
+        src="/assets/photos/chair.jpg"
+        width={379}
+        height={590}
+        alt={"Chair"}
+        priority={true}
+      />
+    </Div>
   );
 }
+
+const Div = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+  width: 100vw;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+`;
