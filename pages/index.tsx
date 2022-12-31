@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 import Webcam from "react-webcam";
-import Image from "next/image";
 import * as React from "react";
 import styled, { css } from "styled-components";
 
@@ -7,12 +7,11 @@ export default function Home() {
   return (
     <Div>
       <Webcam />
-      <Image
+      <img
         src="/assets/photos/chair.jpg"
         width={379}
         height={590}
         alt={"Chair"}
-        priority={true}
       />
     </Div>
   );
